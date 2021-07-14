@@ -1,20 +1,6 @@
 .App {
+  background-color: #f0f3f5;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +10,73 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.video-player .video {
+  background-color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.video-player {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-control {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  height: 40px;
+  background-color: #282c2e;
+  color: #f0f3f5;
+  justify-content: space-between;
+}
+
+.left-control, .right-control {
+  display: flex;
+  align-items: center;
+}
+
+.control {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.control:first-child {
+  margin-left: 0;
+}
+
+.time-control {
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.video {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.caption-content {
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 8px 20px 8px 10px;
+  background-color: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.caption-text {
+  flex: 1;
+  color: #D6B600;
+}
+
+.caption-pos {
+  cursor: move;
 }
