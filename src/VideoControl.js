@@ -16,7 +16,12 @@ const secondsToTime = (sec) => {
 };
 
 const VideoControl = ({
-  isPlay, duration, seconds, togglePlay,
+  isPlay,
+  duration,
+  seconds,
+  togglePlay,
+  toggleShowCC,
+  showCC,
 }) => (
   <div className="video-control">
     <div className="left-control">
@@ -33,8 +38,8 @@ const VideoControl = ({
     </div>
 
     <div className="right-control">
-      <div className="control">
-        <FontAwesomeIcon icon={faClosedCaptioning} />
+      <div className={`control ${showCC ? 'active' : ''}`}>
+        <FontAwesomeIcon onClick={toggleShowCC} icon={faClosedCaptioning} />
       </div>
       <div className="control">
         <FontAwesomeIcon icon={faExpand} />

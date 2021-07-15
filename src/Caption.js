@@ -13,7 +13,7 @@ const Caption = ({ seconds, showCC }) => {
   const [subtitles, setSubtitles] = useState([]);
 
   useEffect(() => {
-    fetch('/sub.srt').then((res) => res.text()).then((data) => {
+    fetch('sub.srt').then((res) => res.text()).then((data) => {
       const lines = [];
       data.split(/\n{2}/).forEach((line) => {
         const [_, time, text] = line.split('\n');
@@ -45,7 +45,7 @@ const Caption = ({ seconds, showCC }) => {
     return subtitle.text;
   };
 
-  if (!getCaption()) {
+  if (!getCaption() || !showCC) {
     return null;
   }
 

@@ -82,3 +82,7 @@
 .caption-pos {
   cursor: move;
 }
+
+.control.active {
+  color: #2a638b;
+}

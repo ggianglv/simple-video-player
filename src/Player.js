@@ -11,6 +11,7 @@ const Player = () => {
   const [seconds, setSeconds] = useState(0);
   const [isPlay, setIsPlay] = useState(false);
   const [duration, setDuration] = useState(0);
+  const [showCC, setShowCC] = useState(true);
 
   const onCanPlay = () => {
     setDuration(videoRef.current.duration);
@@ -29,6 +30,10 @@ const Player = () => {
     setIsPlay(!isPlay);
   };
 
+  const toggleShowCC = () => {
+    setShowCC(!showCC);
+  };
+
   const onTimeUpdate = () => {
     setSeconds(Math.round(videoRef.current.currentTime));
   };
@@ -45,10 +50,12 @@ const Player = () => {
         >
           <source src="https://edx-video.net/StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
         </video>
-        <Caption seconds={seconds} />
+        <Caption showCC={showCC} seconds={seconds} />
       </div>
 
       <VideoControl
+        showCC={showCC}
+        toggleShowCC={toggleShowCC}
         togglePlay={togglePlay}
         canPlay={canPlay}
         duration={duration}
