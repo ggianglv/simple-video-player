@@ -32,7 +32,6 @@ const Caption = ({ seconds, showCC }) => {
   }, []);
 
   const getCaption = () => {
-    console.log(subtitles);
     const subtitle = subtitles.find((item) => {
       const { from, to } = item.time;
 
