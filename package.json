@@ -2,7 +2,7 @@
   "name": "simple-video-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "ggianglv.github.io/simple-video-player",
+  "homepage": "https://ggianglv.github.io/simple-video-player/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
@@ -27,18 +27,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   },
   "devDependencies": {
