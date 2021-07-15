@@ -7,7 +7,6 @@ const HEIGHT = WIDTH * 9 / 16;
 
 const Player = () => {
   const videoRef = useRef(null);
-  const intervalId = useRef(null);
   const [canPlay, setCanPlay] = useState(false);
   const [seconds, setSeconds] = useState(0);
   const [isPlay, setIsPlay] = useState(false);
@@ -46,7 +45,7 @@ const Player = () => {
         >
           <source src="https://edx-video.net/StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
         </video>
-        <Caption />
+        <Caption seconds={seconds} />
       </div>
 
       <VideoControl

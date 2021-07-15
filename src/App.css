@@ -73,6 +73,8 @@
 }
 
 .caption-text {
+  margin-left: 10px;
+  text-align: left;
   flex: 1;
   color: #D6B600;
 }
