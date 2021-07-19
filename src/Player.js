@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Caption from './Caption';
 import VideoControl from './VideoControl';
+import TimeBar from './TimeBar';
 
 const WIDTH = 600;
 const HEIGHT = WIDTH * 9 / 16;
@@ -38,6 +39,10 @@ const Player = () => {
     setSeconds(Math.round(videoRef.current.currentTime));
   };
 
+  const updateCurrentTime = (time) => {
+    videoRef.current.currentTime = time;
+  };
+
   return (
     <div className="video-player">
       <div style={{ width: WIDTH, height: HEIGHT }} className="video">
@@ -52,6 +57,8 @@ const Player = () => {
         </video>
         <Caption showCC={showCC} seconds={seconds} />
       </div>
+
+      <TimeBar seconds={seconds} duration={duration} updateCurrentTime={updateCurrentTime} />
 
       <VideoControl
         showCC={showCC}

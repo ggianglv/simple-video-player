@@ -86,3 +86,26 @@
 .control.active {
   color: #2a638b;
 }
+
+.time-bar {
+  cursor: pointer;
+  background-color: #4f595d;
+}
+
+.time-bar-inner {
+  position: relative;
+  height: 10px;
+  background-color: #8e3e63;
+  width: 50%;
+  transition: width 0.3s linear;
+}
+
+.time-bar-inner:after {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #cb598d;
+  border-radius: 2px;
+  right: -10px;
+}
