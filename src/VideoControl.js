@@ -3,17 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay, faPause, faClosedCaptioning, faExpand,
 } from '@fortawesome/free-solid-svg-icons';
-
-const secondsToTime = (sec) => {
-  const h = Math.floor(sec / 3600).toString().padStart(2, '0');
-  const m = Math.floor(sec % 3600 / 60).toString().padStart(2, '0');
-  const s = Math.floor(sec % 60).toString().padStart(2, '0');
-  if (h === '00') {
-    return `${m}:${s}`;
-  }
-
-  return `${h}:${m}:${s}`;
-};
+import { secondsToTime } from './helpers';
 
 const VideoControl = ({
   isPlay,

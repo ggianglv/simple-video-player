@@ -88,6 +88,7 @@
 }
 
 .time-bar {
+  position: relative;
   cursor: pointer;
   background-color: #4f595d;
 }
@@ -108,4 +109,24 @@
   background-color: #cb598d;
   border-radius: 2px;
   right: -10px;
+}
+
+.thumbnail {
+  position: absolute;
+  top: -115px;
+  width: 160px;
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail .image {
+  flex: 1;
+  background-color: white;
+  height: 90px;
+}
+
+.thumbnail .time {
+  font-size: 12px;
+  background-color: rgba(79, 89, 93, 0.4);
 }

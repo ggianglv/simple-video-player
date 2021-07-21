@@ -53,12 +53,17 @@ const Player = () => {
           width={WIDTH}
           height={HEIGHT}
         >
-          <source src="https://edx-video.net/StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
+          <source src="/StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
         </video>
         <Caption showCC={showCC} seconds={seconds} />
       </div>
 
-      <TimeBar seconds={seconds} duration={duration} updateCurrentTime={updateCurrentTime} />
+      <TimeBar
+        videoRef={videoRef}
+        seconds={seconds}
+        duration={duration}
+        updateCurrentTime={updateCurrentTime}
+      />
 
       <VideoControl
         showCC={showCC}
