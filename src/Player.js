@@ -53,7 +53,7 @@ const Player = () => {
           width={WIDTH}
           height={HEIGHT}
         >
-          <source src="/StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
+          <source src="StanfordOnlineCSX0003-V000700_DTH.mp4" type="video/mp4" />
         </video>
         <Caption showCC={showCC} seconds={seconds} />
       </div>
