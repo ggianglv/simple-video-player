@@ -1,0 +1,23 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1
+jobs:
+  build:
+    executor:
+      name: node/default
+      tag: '16.6'
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run build
+            - run:
+                name: Config git
+                command: |
+                  git config user.email "gianglevan94@gmail.com"
+                  git config user.name "giangg"
+            - add_ssh_keys:
+                fingerprints:
+                  - "73:c4:84:37:cc:e9:9d:55:d7:f2:22:6b:e2:1c:64:ba"
+            - run: npm run deploy
