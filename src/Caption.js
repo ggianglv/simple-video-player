@@ -16,7 +16,7 @@ const Caption = ({ seconds, showCC }) => {
     fetch('sub.srt').then((res) => res.text()).then((data) => {
       const lines = [];
       data.split(/\n{2}/).forEach((line) => {
-        const [_, time, text] = line.split('\n');
+        const [, time, text] = line.split('\n');
         if (!time || !text) {
           return;
         }

@@ -19,5 +19,5 @@ jobs:
                   git config user.name "giangg"
             - add_ssh_keys:
                 fingerprints:
-                  - "73:c4:84:37:cc:e9:9d:55:d7:f2:22:6b:e2:1c:64:ba"
+                  - "1b:b6:40:f9:d8:51:00:48:6b:38:f9:62:02:ab:f1:3f"
             - run: npm run deploy
